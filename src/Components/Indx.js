@@ -1,7 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import {BrowserRouter as Router,Route} from 'react-router-dom'
 import UserRgt from './UserRegisteration'
-import Popup from './popupData'
 import NavRender from './Nav'
 import Search from './Search'
 import Home from './Home'

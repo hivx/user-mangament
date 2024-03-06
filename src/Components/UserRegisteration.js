@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import {Link}  from 'react-router-dom'
-import {avt} from './avt.png'
+
 export default class UserInfo extends Component {
 
     constructor(props) {
@@ -19,30 +18,30 @@ export default class UserInfo extends Component {
             ErrorAdd: '',
             disp : '',
             GlobalError: true ,
-            key : localStorage.length==0 ? 0 : localStorage.length+2
+            key : localStorage.length===0 ? 0 : localStorage.length+2
         }
     }
 
     FNameHandler = (event) => {
         const value = event.target.value;
 
-        const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 5 && value.length <= 10)
+        const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 1 && value.length <= 10)
 
-        this.setState({ ErrorFName: error ? ' ' : 'Please Enter Valid Name -Min length : 5 Max Length : 10', GlobalError: !error ,firstname : value})
+        this.setState({ ErrorFName: error ? ' ' : 'Please Enter Valid Name - Min length : 1 Max Length : 10', GlobalError: !error ,firstname : value})
 
        
     }
     LNameHandler = (event) => {
         const value = event.target.value;
 
-        const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 5 && value.length <= 10)
+        const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 1 && value.length <= 10)
 
-        this.setState({ ErrorLName: error ? ' ' : 'Please Enter Valid Name -Min length : 5 Max Length : 10', GlobalError: !error,lastname : value })
+        this.setState({ ErrorLName: error ? ' ' : 'Please Enter Valid Name - Min length : 1 Max Length : 10', GlobalError: !error,lastname : value })
     }
     EmailHandler = (event) => {
         const value = event.target.value;
 
-        const error = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
+        const error = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(value)
 
         this.setState({ ErrorEmail: error ? ' ' : 'Please Enter Valid Email', GlobalError: !error,email : value })
         
@@ -50,8 +49,8 @@ export default class UserInfo extends Component {
 
     PhoneHandler = (event) => {
         const value = event.target.value;
-        const error = /^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$/.test(value)
-        this.setState({ ErrorPhone: error ? ' ' : 'Please Enter Valid Phone.No', GlobalError: !error,phone : value })
+        const error = /^(0|\+84)\d{9}$/.test(value)
+        this.setState({ ErrorPhone: error ? ' ' : 'Please Enter Valid Phone', GlobalError: !error,phone : value })
         
     }
 

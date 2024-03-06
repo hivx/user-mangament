@@ -31,24 +31,24 @@ export default class MyVerticallyCenteredModal extends PureComponent {
 FNameHandler = (event) => {
     const value = event.target.value;
 
-    const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 5 && value.length <= 10)
+    const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 1 && value.length <= 10)
 
-    this.setState({ ErrorFName: error ? ' ' : 'Please Enter Valid Name -Min length : 5 Max Length : 10', GlobalError: !error ,firstname : value})
+    this.setState({ ErrorFName: error ? ' ' : 'Please Enter Valid Name - Min length : 1 Max Length : 10', GlobalError: !error ,firstname : value})
 
     console.log(error);
 }
 LNameHandler = (event) => {
     const value = event.target.value;
 
-    const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 5 && value.length <= 10)
+    const error = /^[a-zA-Z]+$/.test(value) && (value.length >= 1 && value.length <= 10)
 
-    this.setState({ ErrorLName: error ? ' ' : 'Please Enter Valid Name -Min length : 5 Max Length : 10', GlobalError: !error,lastname : value })
+    this.setState({ ErrorLName: error ? ' ' : 'Please Enter Valid Name - Min length : 1 Max Length : 10', GlobalError: !error,lastname : value })
     console.log(error);
 }
 EmailHandler = (event) => {
     const value = event.target.value;
 
-    const error = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)
+    const error = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(value)
 
     this.setState({ ErrorEmail: error ? ' ' : 'Please Enter Valid Email', GlobalError: !error,email : value })
     console.log(error);
@@ -58,7 +58,7 @@ PhoneHandler = (event) => {
     const value = event.target.value;
     console.log(event);
     const error = /^(0|\+84)\d{9}$/.test(value)
-    this.setState({ ErrorPhone: error ? ' ' : 'Please Enter Valid Phone.No', GlobalError: !error,phone : value })
+    this.setState({ ErrorPhone: error ? ' ' : 'Please Enter Valid Phone', GlobalError: !error,phone : value })
     console.log(error);
 }
 
@@ -139,7 +139,7 @@ image : obj.Image
 
 
           <div class="modal-header" >
-            <h5 class="modal-title" id="exampleModalLabel">Record</h5>
+            <h5 class="modal-title" id="exampleModalLabel">User</h5>
           </div>
           <div class="modal-body">
 

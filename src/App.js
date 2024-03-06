@@ -1,7 +1,4 @@
 import React from 'react';
-import UserRgt from './Components/UserRegisteration'
-import Index from './Components/Home'
-import NavRender from './Components/Nav'
 import Indx from './Components/Indx'
 import './App.css';
 import './bootstrap.min.css'

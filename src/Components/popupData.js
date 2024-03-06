@@ -12,10 +12,10 @@ const obj=JSON.parse(localStorage.getItem(props.dt)) || '';
    <div className="modal-dialog modal-sm">
     <Modal isOpen={props.show}>
         
-    <h5 class="modal-title" style={{background:'#e74c3c',textAlign:'center' }}>VIEW</h5>
+    <h5 class="modal-title" style={{background:'#ecebea',textAlign:'center' }}>VIEW</h5>
 
     <div class="modal-header">
-        <h5 class="modal-title font-bold" id="exampleModalLabel">RECORD</h5>
+        <h5 class="modal-title font-bold" id="exampleModalLabel">USER</h5>
 </div>
 
 
@@ -46,7 +46,7 @@ const obj=JSON.parse(localStorage.getItem(props.dt)) || '';
       </div>
 
 
-        <div class="modal-footer" style={{background:'#e74c3c',textAlign:'center' }}>
+        <div class="modal-footer" style={{background:'#ecebea',textAlign:'center' }}>
         <button type="button" class="btn btn-secondary" onClick={props.onHide}  >Close</button>
       </div>
     </Modal>

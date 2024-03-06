@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Popup from './popupData'
-import {Link} from 'react-router-dom'
 import UpdatePanel from './updatePanel'
 
 import '../bootstrap/card.css'
